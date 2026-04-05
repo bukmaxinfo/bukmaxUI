@@ -20,6 +20,17 @@ export const metadata: Metadata = {
   title: "bukmax.llc — AI Company Building Cool Apps",
   description:
     "We craft intelligent software that solves real problems. From concept to launch, bukmax.llc builds AI-powered applications that people actually love to use.",
+  openGraph: {
+    title: "bukmax.llc — AI Company Building Cool Apps",
+    description:
+      "AI-powered software studio building cool apps.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

@@ -141,11 +141,7 @@ export default function Home() {
             <div className="card-hover rounded-xl overflow-hidden bg-[var(--bg-secondary)]">
               <div className="p-10">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                    <span className="font-[family-name:var(--font-display)] text-2xl font-800 text-[var(--accent)]">
-                      W
-                    </span>
-                  </div>
+                  <img src="/wuquan-icon.png" alt="WUQUAN" className="w-14 h-14 rounded-2xl" />
                   <div>
                     <h3 className="font-[family-name:var(--font-display)] text-2xl font-700">
                       舞拳 <span className="text-[var(--fg-muted)] text-lg font-500">WUQUAN</span>
@@ -185,11 +181,7 @@ export default function Home() {
             <div className="card-hover rounded-xl overflow-hidden bg-[var(--bg-secondary)]">
               <div className="p-10">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                    <span className="font-[family-name:var(--font-display)] text-2xl font-800 text-[var(--accent)]">
-                      5
-                    </span>
-                  </div>
+                  <img src="/endless-icon.png" alt="5 Endless Games" className="w-14 h-14 rounded-2xl" />
                   <div>
                     <h3 className="font-[family-name:var(--font-display)] text-2xl font-700">
                       5 Endless Games
