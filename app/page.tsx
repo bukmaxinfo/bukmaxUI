@@ -122,28 +122,130 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats strip */}
-      <section className="border-y border-[var(--border)] bg-[var(--bg-secondary)]">
+      {/* Our Apps */}
+      <section className="relative py-32 border-t border-[var(--border)]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[var(--accent)] opacity-[0.03] blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4">
-            {[
-              { value: "10+", label: "Projects Shipped" },
-              { value: "99%", label: "Client Satisfaction" },
-              { value: "< 4wk", label: "Avg. Time to MVP" },
-              { value: "24/7", label: "Support & Monitoring" },
-            ].map((stat, i) => (
-              <div
-                key={stat.label}
-                className={`py-12 px-6 text-center ${i < 3 ? "border-r border-[var(--border)]" : ""}`}
-              >
-                <div className="font-[family-name:var(--font-display)] text-3xl font-800 text-[var(--accent)] mb-2">
-                  {stat.value}
+          <div className="text-center mb-16">
+            <div className="accent-line mx-auto mb-6" />
+            <h2 className="font-[family-name:var(--font-display)] text-4xl font-700 tracking-tight mb-4">
+              Our Apps
+            </h2>
+            <p className="font-[family-name:var(--font-body)] text-[var(--fg-secondary)] font-300 max-w-lg mx-auto">
+              Games we&apos;re building — crafted with SpriteKit, powered by fun.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* WUQUAN */}
+            <div className="card-hover rounded-xl overflow-hidden bg-[var(--bg-secondary)]">
+              <div className="p-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                    <span className="font-[family-name:var(--font-display)] text-2xl font-800 text-[var(--accent)]">
+                      W
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="font-[family-name:var(--font-display)] text-2xl font-700">
+                      舞拳 <span className="text-[var(--fg-muted)] text-lg font-500">WUQUAN</span>
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-green-500/10 text-green-400 text-xs font-[family-name:var(--font-body)] font-500">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                        In Development
+                      </span>
+                      <span className="text-xs text-[var(--fg-muted)] font-[family-name:var(--font-body)]">
+                        iOS
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="font-[family-name:var(--font-body)] text-xs text-[var(--fg-muted)] tracking-widest uppercase">
-                  {stat.label}
+
+                <p className="font-[family-name:var(--font-body)] text-[var(--fg-secondary)] leading-relaxed font-300 mb-6">
+                  A fresh spin on rock-paper-scissors with gesture mechanics, direction pointing, and shake detection. Battle an adaptive AI opponent or challenge a friend in local multiplayer — all wrapped in animated, haptic-rich gameplay.
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {["SpriteKit", "Gesture Controls", "AI Opponent", "Multiplayer", "Haptics"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 rounded-md border border-[var(--border)] text-xs font-[family-name:var(--font-body)] text-[var(--fg-muted)]"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* 5 Endless Games */}
+            <div className="card-hover rounded-xl overflow-hidden bg-[var(--bg-secondary)]">
+              <div className="p-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                    <span className="font-[family-name:var(--font-display)] text-2xl font-800 text-[var(--accent)]">
+                      5
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="font-[family-name:var(--font-display)] text-2xl font-700">
+                      5 Endless Games
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-[family-name:var(--font-body)] font-500">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
+                        Coming Soon
+                      </span>
+                      <span className="text-xs text-[var(--fg-muted)] font-[family-name:var(--font-body)]">
+                        iOS
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="font-[family-name:var(--font-body)] text-[var(--fg-secondary)] leading-relaxed font-300 mb-6">
+                  Five addictive mini-games in one app — Color Memory, Rhythm Tap, Bounce Ball, Dodge Master, and Merge Pop. One-handed, pick-up-and-play arcade games designed for quick sessions and endless replayability.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {[
+                    { name: "颜色记忆", en: "Color Memory" },
+                    { name: "节奏拍拍", en: "Rhythm Tap" },
+                    { name: "弹弹球", en: "Bounce Ball" },
+                    { name: "闪避大师", en: "Dodge Master" },
+                    { name: "合并消除", en: "Merge Pop" },
+                  ].map((game) => (
+                    <div
+                      key={game.en}
+                      className="flex items-center gap-2 px-3 py-2 rounded-md border border-[var(--border)] bg-[var(--bg-primary)]"
+                    >
+                      <span className="text-xs text-[var(--fg-muted)] font-[family-name:var(--font-body)]">
+                        {game.name}
+                      </span>
+                      <span className="text-xs text-[var(--fg-secondary)] font-[family-name:var(--font-body)] font-300">
+                        {game.en}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {["SpriteKit", "Game Hub", "Endless Mode", "One-Handed Play"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 rounded-md border border-[var(--border)] text-xs font-[family-name:var(--font-body)] text-[var(--fg-muted)]"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
