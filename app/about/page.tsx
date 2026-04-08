@@ -125,10 +125,62 @@ export default function About() {
             </h2>
             <div className="accent-line mt-4 mb-6" />
             <p className="font-[family-name:var(--font-body)] text-[var(--fg-secondary)] font-300 max-w-2xl leading-relaxed">
-              We&apos;re currently focused on iOS gaming — crafting fun, polished
-              experiences with SpriteKit. Here&apos;s what&apos;s in the works.
+              From AI-powered health tools to SpriteKit games — here&apos;s
+              what we&apos;re shipping on iOS.
             </p>
           </div>
+
+          {/* SportsMeal */}
+          <div className="grid lg:grid-cols-12 gap-10 mb-16">
+            <div className="lg:col-span-2 flex lg:justify-center">
+              <img
+                src="/sportsmeal-icon.png"
+                alt="SportsMeal"
+                className="w-24 h-24 rounded-2xl"
+              />
+            </div>
+            <div className="lg:col-span-10">
+              <div className="flex items-center gap-3 mb-3">
+                <h3 className="font-[family-name:var(--font-display)] text-2xl font-700">
+                  SportsMeal
+                </h3>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-green-500/10 text-green-400 text-xs font-[family-name:var(--font-body)] font-500">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                  In Development
+                </span>
+              </div>
+              <p className="font-[family-name:var(--font-body)] text-[var(--fg-secondary)] leading-relaxed font-300 mb-5 max-w-2xl">
+                A comprehensive AI-powered nutrition and health app. Photograph
+                meals for instant calorie and macro estimates using Claude Vision,
+                scan barcodes for packaged foods, manage your pantry with
+                expiration tracking, and get personalized recipe suggestions.
+                Integrates with Apple HealthKit for weight, steps, and workout
+                syncing. Available in English and Chinese.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3 max-w-xl">
+                {[
+                  "AI meal photo analysis (Claude Vision)",
+                  "Macro tracking: protein, carbs, fat",
+                  "Barcode scanner via OpenFoodFacts",
+                  "Pantry management & recipe generation",
+                  "Apple HealthKit integration",
+                  "Restaurant menu scanner",
+                  "Meal templates & quick logging",
+                  "iOS Widgets & Apple Watch companion",
+                ].map((feature) => (
+                  <div key={feature} className="flex items-start gap-2">
+                    <span className="text-[var(--accent)] mt-1 text-xs">▸</span>
+                    <span className="font-[family-name:var(--font-body)] text-sm text-[var(--fg-secondary)] font-300">
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-[var(--border)] my-12" />
 
           {/* WUQUAN */}
           <div className="grid lg:grid-cols-12 gap-10 mb-16">
@@ -286,7 +338,7 @@ export default function About() {
                   "React / Next.js",
                   "Python",
                   "LLM APIs",
-                  "CoreMotion / AVAudio",
+                  "HealthKit / SwiftData",
                 ].map((tech) => (
                   <div
                     key={tech}

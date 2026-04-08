@@ -132,11 +132,52 @@ export default function Home() {
               Our Apps
             </h2>
             <p className="font-[family-name:var(--font-body)] text-[var(--fg-secondary)] font-300 max-w-lg mx-auto">
-              Games we&apos;re building — crafted with SpriteKit, powered by fun.
+              Apps we&apos;re building — from AI-powered health tools to
+              SpriteKit games.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* SportsMeal */}
+            <div className="card-hover rounded-xl overflow-hidden bg-[var(--bg-secondary)]">
+              <div className="p-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <img src="/sportsmeal-icon.png" alt="SportsMeal" className="w-14 h-14 rounded-2xl" />
+                  <div>
+                    <h3 className="font-[family-name:var(--font-display)] text-2xl font-700">
+                      SportsMeal
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-green-500/10 text-green-400 text-xs font-[family-name:var(--font-body)] font-500">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                        In Development
+                      </span>
+                      <span className="text-xs text-[var(--fg-muted)] font-[family-name:var(--font-body)]">
+                        iOS
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="font-[family-name:var(--font-body)] text-[var(--fg-secondary)] leading-relaxed font-300 mb-6">
+                  AI-powered calorie &amp; nutrition tracker. Photograph meals for instant calorie and macro estimates, scan barcodes, manage your pantry, and get personalized recipe suggestions — all powered by Claude Vision.
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {["Claude Vision", "HealthKit", "SwiftData", "Barcode Scan", "Meal AI"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 rounded-md border border-[var(--border)] text-xs font-[family-name:var(--font-body)] text-[var(--fg-muted)]"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
+
             {/* WUQUAN */}
             <div className="card-hover rounded-xl overflow-hidden bg-[var(--bg-secondary)]">
               <div className="p-10">
